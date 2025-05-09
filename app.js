@@ -53,7 +53,9 @@ const authRoutes = require('./routes/auth');
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:'https://socialboot-backend.vercel.app/'
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI)
