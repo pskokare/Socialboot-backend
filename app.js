@@ -54,7 +54,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin:'https://social-boot-frontend-r5ew.vercel.app/',
+  origin:'*',
   methods: ["GET", "POST", "PUT" ,"PATCH", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
