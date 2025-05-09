@@ -54,7 +54,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin:'https://socialboot-backend.vercel.app/'
+  origin:['https://socialboot-backend.vercel.app/'],
+  methods: ["GET", "POST", "PUT" ,"PATCH", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
 }));
 app.use(express.json());
 
